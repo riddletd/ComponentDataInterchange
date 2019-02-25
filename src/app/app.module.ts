@@ -2,22 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ChildComponent } from './components/child/child.component';
-import { ParentComponent } from './components/parent/parent.component';
-import { SiblingComponent } from './components/sibling/sibling.component';
-import { DataService } from './services/data.service';
+import { Sibling1Component } from './components/sibling1/sibling1.component';
+import { Sibling2Component } from './components/sibling2/sibling2.component';
+import { StringService } from './services/StringService';
+import { ButtonComponent } from './components/button/button.component';
+import { NumberService } from './services/NumberService';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent,
-    ParentComponent,
-    SiblingComponent
+    Sibling1Component,
+    Sibling2Component,
+    ButtonComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [DataService],
+  providers: [StringService, NumberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
