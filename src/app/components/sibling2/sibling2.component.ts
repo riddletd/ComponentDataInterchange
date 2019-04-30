@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { StringService } from "src/app/services/StringService";
-import { SubSink } from "src/app/subsink";
+import { StringService } from "src/app/services/string.service";
+import { SubSink } from "subsink";
 
 @Component({
   selector: "app-sibling2",
@@ -8,7 +8,7 @@ import { SubSink } from "src/app/subsink";
   styleUrls: ["./sibling2.component.css"]
 })
 export class Sibling2Component implements OnInit {
-  data: string;
+  data: string
   subs = new SubSink()
 
   constructor(private ss: StringService) {}
@@ -17,7 +17,7 @@ export class Sibling2Component implements OnInit {
     this.subs.sink = this.ss.current.subscribe(data => (this.data = data))
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.subs.unsubscribe()
   }
 }

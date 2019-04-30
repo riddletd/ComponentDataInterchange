@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { StringService } from 'src/app/services/StringService';
-import { NumberService } from 'src/app/services/NumberService';
+import { StringService } from 'src/app/services/string.service';
+import { NumberService } from 'src/app/services/number.service';
 
 @Component({
   selector: 'app-button',

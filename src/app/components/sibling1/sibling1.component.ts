@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NumberService } from 'src/app/services/NumberService';
-import { SubSink } from 'src/app/subsink';
+import { NumberService } from 'src/app/services/number.service';
+import { SubSink } from "subsink";
 
 @Component({
   selector: 'app-sibling1',
@@ -17,7 +17,7 @@ export class Sibling1Component implements OnInit {
     this.subs.sink = this.ns.current.subscribe(data => (this.data = data))
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this.subs.unsubscribe()
   }
 }
