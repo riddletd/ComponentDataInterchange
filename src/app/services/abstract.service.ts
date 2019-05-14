@@ -1,8 +1,7 @@
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { Subject } from "rxjs";
 
 export class AbstractService<T> {
-  generic: T;
-  private source = new BehaviorSubject<T>(this.generic);
+  private source = new Subject<T>();
   current = this.source.asObservable();
 
   change(data: T) {

@@ -7,6 +7,7 @@ import { Sibling2Component } from './components/sibling2/sibling2.component';
 import { StringService } from './services/string.service';
 import { ButtonComponent } from './components/button/button.component';
 import { NumberService } from './services/number.service';
+import { AbstractService } from './services/abstract.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { NumberService } from './services/number.service';
   imports: [
     BrowserModule
   ],
-  providers: [StringService, NumberService],
+  providers: [StringService, NumberService, AbstractService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
